@@ -9,7 +9,7 @@ const history = createHystory();
 
 ReactDOM.render(
     <Router history={history}>
-        <div>
+        <div className="row">
             <Switch>
                 <Route exact path="/" component={Home} />
             </Switch>
