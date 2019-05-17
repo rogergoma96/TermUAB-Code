@@ -10,9 +10,14 @@ class SideNav extends React.Component {
     render() {
         return (
             <ul id="nav-mobile" className="sidenav sidenav-fixed col s2">
-                <li className={style.login}>
+                <li className={style.item}>
                     <Link to={'/login'}>
-                        <span>Login</span>
+                        <span>Inicia sesión</span>
+                    </Link>
+                </li>
+                <li className={style.item}>
+                    <Link to={'/register'}>
+                        <span>Regístrate</span>
                     </Link>
                 </li>
             </ul>

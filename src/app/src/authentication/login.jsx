@@ -14,7 +14,7 @@ class Login extends React.Component {
                     <div className="row valign-wrapper">
                         <div className={`col l4 s12 offset-l4 m6 offset-m3 valign`}>
                             <div className={`card-panel hoverable center ${styles.card}`}>
-                                <h1 className={styles.title}>Login</h1>
+                                <h1 className={styles.title}>Inicia sesión</h1>
                                 <div className="input-field">
                                     <input id="email" type="email" className="validate" />
                                     <label htmlFor="email">E-mail</label>
@@ -23,7 +23,7 @@ class Login extends React.Component {
                                     <input id="password" type="password" className="validate" />
                                     <label htmlFor="password">Contrasenya</label>
                                 </div>
-                                <button className="right-align btn waves-effect waves-light" type="submit" name="action">
+                                <button className="btn waves-effect waves-light" type="submit" name="action">
                                     Iniciar sessión
                                 </button>
                                 <div className="left-align">
