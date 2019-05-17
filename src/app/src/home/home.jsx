@@ -3,13 +3,16 @@ import React from "react";
 import Header from "./header";
 import SideNav from "./sideNav";
 
+/**
+ * Home
+ */
 class Home extends Component {
     render() {
         return (
-            <React.Fragment>
+            <div className="row">
                 <Header />
                 <SideNav />
-            </React.Fragment>
+            </div>
         );
     }
 }

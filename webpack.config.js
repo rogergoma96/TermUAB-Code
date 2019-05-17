@@ -12,7 +12,6 @@ module.exports = (env, argv) => {
       new Dotenv(),
       new MiniCssExtractPlugin({
           filename: 'styles.css',
-          chunkFilename: '[name].[hash].css',
       }),
   ];
 
@@ -40,7 +39,6 @@ module.exports = (env, argv) => {
           path: path.resolve(__dirname, process.env.BUILD_PATH),
           publicPath: '/',
           filename: 'main.js',
-          chunkFilename: '[name].[hash].js',
       },
       module: {
           rules: [
@@ -75,17 +73,11 @@ module.exports = (env, argv) => {
           ]
       },
       plugins,
-      optimization: {
-          minimizer: plugins,
-          splitChunks: {
-              chunks: 'all',
-              maxSize: 249856,
-          },
-      },
       resolve: {
           extensions: ['.js', '.jsx', '.json'],
       },
       devServer: {
+          open: true,
           historyApiFallback: true,
           contentBase: './',
       },

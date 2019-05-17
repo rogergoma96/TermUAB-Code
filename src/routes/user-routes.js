@@ -1,5 +1,6 @@
-module.exports = (app, passport) => {
+/**module.exports = (app, passport) => {
     app.post('', (req, res) => {
 
     });
 };
+**/

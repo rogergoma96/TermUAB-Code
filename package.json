@@ -4,9 +4,9 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
-    "webpack": "webpack --mode development -w"
+    "start": "nodemon src/index.js",
+    "dev": "webpack -d --mode=development -w",
+    "pro": "webpack -p --mode=production"
   },
   "repository": {
     "type": "git",
@@ -44,6 +44,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-materialize": "^3.3.0",
+    "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",

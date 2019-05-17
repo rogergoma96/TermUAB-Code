@@ -1,19 +1,21 @@
+import { createBrowserHistory } from 'history';
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import createHystory from 'history/createBrowserHistory'
 import { Router, Route, Switch } from 'react-router-dom';
-import Home from './home/home';
 
-const history = createHystory();
+import Home from './home/home';
+import Login from './authentication/login';
+
+import '../style/globals.scss';
+
+const history = createBrowserHistory();
 
 ReactDOM.render(
     <Router history={history}>
-        <div className="row">
-            <Switch>
-                <Route exact path="/" component={Home} />
-            </Switch>
-        </div>
+        <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/login" component={Login} />
+        </Switch>
     </Router>,
     document.querySelector('#app'),
 );
