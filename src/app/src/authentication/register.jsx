@@ -9,7 +9,7 @@ import styles from '../../style/authentication/register.scss';
 class Register extends React.Component {
     render() {
         return (
-            <div className={`teal darken-3 ${styles.login}`}>
+            <div className={`teal darken-3 ${styles.register}`}>
                 <div className="container">
                     <div className="row valign-wrapper">
                         <div className={`col l4 s12 offset-l4 m6 offset-m3 valign`}>
