@@ -10,7 +10,7 @@ const { mongoose } = require('./config/dataBase');
 
 const app = express();
 
-// require('./config/passport')(passport);
+require('./config/passport')(passport);
 
 // Settings
 app.set('port', process.env.PORT || 8080);
@@ -30,7 +30,7 @@ app.use(session({
 }));
 
 // Routes
-//require('./routes/user-routes')(app, passport);
+require('./routes/user-routes')(app, passport);
 //app.use('/api/tasks', require('./routes/task.routes'));
 
 // Static files

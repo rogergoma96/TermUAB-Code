@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
-const URI = 'mongodb://localhost/mern-tasks';
+const URI = 'mongodb://localhost/termUAB-DB-Dev';
 
-mongoose.connect(URI)
-    .then(db => console.log('DB is connected'))
-    .catch(err => console.error(err));
+mongoose.connect(URI, {
+    useNewUrlParser: true
+});
 
 module.exports = mongoose;

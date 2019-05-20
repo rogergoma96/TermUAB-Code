@@ -15,17 +15,19 @@ class Login extends React.Component {
                         <div className={`col l4 s12 offset-l4 m6 offset-m3 valign`}>
                             <div className={`card-panel hoverable center ${styles.card}`}>
                                 <h1 className={styles.title}>Inicia sesión</h1>
-                                <div className="input-field">
-                                    <input id="email" type="email" className="validate" />
-                                    <label htmlFor="email">E-mail</label>
-                                </div>
-                                <div className="input-field">
-                                    <input id="password" type="password" className="validate" />
-                                    <label htmlFor="password">Contrasenya</label>
-                                </div>
-                                <button className="btn waves-effect waves-light" type="submit" name="action">
-                                    Iniciar sessión
-                                </button>
+                                <form action="/login" method="post">
+                                    <div className="input-field">
+                                        <input id="email" type="email" name="email" className="validate" />
+                                        <label htmlFor="email">E-mail</label>
+                                    </div>
+                                    <div className="input-field">
+                                        <input id="password" type="password" name="password" className="validate" />
+                                        <label htmlFor="password">Contrasenya</label>
+                                    </div>
+                                    <button className="btn waves-effect waves-light" type="submit" name="action">
+                                        Iniciar sessión
+                                    </button>
+                                </form>
                                 <div className="left-align">
                                     <p className={`${styles.text} ${styles.link}`}>
                                         <label>

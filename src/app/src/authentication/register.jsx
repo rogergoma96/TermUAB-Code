@@ -15,29 +15,31 @@ class Register extends React.Component {
                         <div className={`col l4 s12 offset-l4 m6 offset-m3 valign`}>
                             <div className={`card-panel hoverable center ${styles.card}`}>
                                 <h1 className={styles.title}>Registro</h1>
-                                <div className="input-field">
-                                    <input id="firstName" type="text" className="validate" />
-                                    <label htmlFor="firstName">Nombre</label>
-                                </div>
-                                <div className="input-field">
-                                    <input id="lastName" type="text" className="validate" />
-                                    <label htmlFor="lastName">Apellidos</label>
-                                </div>
-                                <div className="input-field">
-                                    <input id="email" type="email" className="validate" />
-                                    <label htmlFor="email">E-mail</label>
-                                </div>
-                                <div className="input-field">
-                                    <input id="password" type="password" className="validate" />
-                                    <label htmlFor="password">Contraseña</label>
-                                </div>
-                                <div className="input-field">
-                                    <input id="repeat-password" type="password" className="validate" />
-                                    <label htmlFor="repeat-password">Repite la contraseña</label>
-                                </div>
-                                <button className="btn waves-effect waves-light" type="submit" name="action">
-                                    Crear cuenta
-                                </button>
+                                <form action="/signup" method="post">
+                                    <div className="input-field">
+                                        <input id="firstName" type="text" className="validate" />
+                                        <label htmlFor="firstName">Nombre</label>
+                                    </div>
+                                    <div className="input-field">
+                                        <input id="lastName" type="text" className="validate" />
+                                        <label htmlFor="lastName">Apellidos</label>
+                                    </div>
+                                    <div className="input-field">
+                                        <input id="email" type="email" name="email" className="validate" autoComplete="email"/>
+                                        <label htmlFor="email">E-mail</label>
+                                    </div>
+                                    <div className="input-field">
+                                        <input id="password" type="password" name="password" className="validate" autoComplete="new-password"/>
+                                        <label htmlFor="password">Contraseña</label>
+                                    </div>
+                                    <div className="input-field">
+                                        <input id="repeat-password" type="password" className="validate" autoComplete="new-password"/>
+                                        <label htmlFor="repeat-password">Repite la contraseña</label>
+                                    </div>
+                                    <button className="btn waves-effect waves-light" type="submit" name="action">
+                                        Crear cuenta
+                                    </button>
+                                </form>
                                 <div className="left-align">
                                     <p className={styles.text}>
                                         <label>
