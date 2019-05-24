@@ -7,6 +7,10 @@ import SideNav from "./sideNav";
  * Home
  */
 class Home extends Component {
+    /**
+     * Render
+     * @returns {*} JSX
+     */
     render() {
         return (
             <div className="row">

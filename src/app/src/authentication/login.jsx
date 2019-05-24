@@ -7,6 +7,10 @@ import styles from '../../style/authentication/login.scss';
  * Login
  */
 class Login extends React.Component {
+    /**
+     * Render
+     * @returns {*} JSX
+     */
     render() {
         return (
             <div className={`teal darken-3 ${styles.login}`}>
@@ -17,11 +21,11 @@ class Login extends React.Component {
                                 <h1 className={styles.title}>Inicia sesión</h1>
                                 <form action="/login" method="post">
                                     <div className="input-field">
-                                        <input id="email" type="email" name="email" className="validate" />
+                                        <input id="email" type="email" name="email" className="validate" autoComplete="email"/>
                                         <label htmlFor="email">E-mail</label>
                                     </div>
                                     <div className="input-field">
-                                        <input id="password" type="password" name="password" className="validate" />
+                                        <input id="password" type="password" name="password" className="validate" autoComplete="current-password" />
                                         <label htmlFor="password">Contrasenya</label>
                                     </div>
                                     <button className="btn waves-effect waves-light" type="submit" name="action">
@@ -39,7 +43,7 @@ class Login extends React.Component {
                                         ¿Has olvidado la contraseña?
                                     </a></p>
                                     <p className={`${styles.text}`}>
-                                        ¿No tienes cuenta? <Link to={'/register'} className={styles.link}>
+                                        ¿No tienes cuenta? <Link to={'/signup'} className={styles.link}>
                                         <span>Únete ahora</span></Link>
                                     </p>
                                 </div>

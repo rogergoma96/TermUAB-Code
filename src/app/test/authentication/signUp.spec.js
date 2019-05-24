@@ -2,13 +2,13 @@ import Adapter from 'enzyme-adapter-react-16';
 import Enzyme, { shallow } from 'enzyme';
 import React from 'react';
 
-import Register from '../../src/authentication/register';
+import SignUp from '../../src/authentication/signUp';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('Register', () => {
+describe('SignUp', () => {
     it('should renders without crashing', () => {
-        const wrapper = shallow(<Register />);
-        expect(wrapper.find('.register').exists()).toEqual(true);
+        const wrapper = shallow(<SignUp />);
+        expect(wrapper.find('.signUp').exists()).toEqual(true);
     });
 });

@@ -13,7 +13,7 @@ module.exports = function (passport) {
         });
     });
 
-    // SignUp
+    // User signup
     passport.use('local-signup', new LocalStrategy({
         usernameField: 'email',
         passwordField: 'password',
@@ -26,6 +26,8 @@ module.exports = function (passport) {
                 return done(null, false, req.flash('signupMessage', 'This email is already taken'));
             } else {
                 var newUser = new User();
+                newUser.local.firstName = req.body.firstName;
+                newUser.local.lastName = req.body.lastName;
                 newUser.local.email = email;
                 newUser.local.password = newUser.generateHash(password);
                 newUser.save(function (err) {
@@ -36,7 +38,7 @@ module.exports = function (passport) {
         });
     }));
 
-    // Login
+    // User login
     passport.use('local-login', new LocalStrategy({
             usernameField: 'email',
             passwordField: 'password',

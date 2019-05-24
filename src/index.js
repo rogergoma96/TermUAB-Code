@@ -12,10 +12,10 @@ const app = express();
 
 require('./config/passport')(passport);
 
-// Settings
+// SETTINGS
 app.set('port', process.env.PORT || 8080);
 
-// Middlewares
+// MIDDLEWARES
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(cookieParser());
@@ -29,14 +29,14 @@ app.use(session({
     saveUninitialized: false,
 }));
 
-// Routes
+// ROUTES
 require('./routes/user-routes')(app, passport);
 //app.use('/api/tasks', require('./routes/task.routes'));
 
-// Static files
+// STATIC FILES
 app.use(express.static(path.join(__dirname + '/public')));
 
-// handle every other route with index.html, which will contain
+// Handle every other route with index.html, which will contain
 // a script tag to your application's JavaScript file(s).
 app.get('*', function (req, res) {
     res.sendFile(path.resolve(__dirname, (__dirname + '/public/index.html')));
