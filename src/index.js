@@ -1,36 +1,38 @@
 const express = require('express');
-const session = require('express-session');
-const morgan = require('morgan');
-const path = require('path');
-const passport = require('passport');
-const flash = require('connect-flash');
-const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-const { mongoose } = require('./config/dataBase');
+const morgan = require('morgan');
+const session = require('express-session');
+const dbConnection = require('./database');
+const MongoStore = require('connect-mongo')(session);
+const passport = require('./passport');
+const path = require('path');
 
 const app = express();
 
-require('./config/passport')(passport);
+const user = require('./routes/user-routes');
 
 // SETTINGS
 app.set('port', process.env.PORT || 8080);
 
 // MIDDLEWARES
 app.use(morgan('dev'));
-app.use(express.json());
-app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json);
+
+// PASSPORT
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(flash());
+
+// SESSIONS
 app.use(session({
     secret: 'ESTO ES SECRETO',
-    resave: false,
-    saveUninitialized: false,
+    store: new MongoStore({ mongooseConnection: dbConnection }),
+    resave: false, // required
+    saveUninitialized: false, // required
 }));
 
 // ROUTES
-require('./routes/user-routes')(app, passport);
+app.use('/user-routes', user);
 //app.use('/api/tasks', require('./routes/task.routes'));
 
 // STATIC FILES
