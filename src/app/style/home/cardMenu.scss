@@ -1,0 +1,11 @@
+.card {
+  cursor: pointer;
+}
+
+.link {
+  color: #ffab40;
+
+  &:hover {
+    color: #ffd8a6;
+  }
+}

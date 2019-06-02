@@ -1,5 +1,7 @@
 import React from "react";
 
+import styles from '../../style/header.scss';
+
 /**
  * Header
  */
@@ -9,8 +11,12 @@ class Header extends React.Component {
      * @returns {*} JSX
      */
     render() {
+        if (window.location.pathname === '/login' || window.location.pathname === '/signup') {
+            return null;
+        }
+
         return (
-            <nav className="header teal darken-3 col s10 offset-s2">
+            <nav className={`${styles.header} col s10 offset-s2 teal darken-3`}>
                 <div className="col s2">
                     <a className="brand-logo" href="/">TermUAB</a>
                 </div>
