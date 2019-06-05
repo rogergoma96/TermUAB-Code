@@ -7,7 +7,7 @@ import Header from "./home/header";
 import Home from "./home/home";
 import Login from "./authentication/login";
 import MyProjects from "./myProjects";
-import NewProject from "./newProject";
+import NewProject from "./newProject/newProject";
 import Projects from "./projects";
 import SideNav from "./home/sideNav";
 import SignUp from "./authentication/signUp";
@@ -27,7 +27,7 @@ ReactDOM.render(
                 <Route exact path="/" component={() => <Home labels={labels.home} />} />
                 <Route exact path="/login" component={Login}/>
                 <Route exact path="/signup" component={SignUp} />
-                <Route exact path="/new-project" component={NewProject} />
+                <Route exact path="/new-project" component={() => <NewProject labels={labels.newProject} />} />
                 <Route exact path="/my-projects" component={MyProjects} />
                 <Route exact path="/projects" component={Projects} />
             </Switch>

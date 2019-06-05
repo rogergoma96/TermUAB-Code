@@ -16,6 +16,10 @@ const getTranslations = {
                 link: 'Buscar projectes',
                 title: 'Projectes en linea',
             }]
+        },
+        newProject: {
+            title: 'Nou projecte',
+            breadcrumbs: 'Inici > Nou projecte',
         }
     }
 };
