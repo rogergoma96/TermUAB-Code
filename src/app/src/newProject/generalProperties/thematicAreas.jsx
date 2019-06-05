@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../../style/newProject.scss";
+import styles from "../../../style/newProject/newProject.scss";
 
 /**
  * Thematic areas

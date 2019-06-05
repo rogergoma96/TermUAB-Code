@@ -49,7 +49,7 @@ module.exports = (env, argv) => {
                   exclude: /node_modules/
               }, {
                   // SCSS
-                  test: /\.scss$/,
+                  test: /\.(scss|css)$/,
                   use: [
                       {
                           loader: MiniCssExtractPlugin.loader,
@@ -69,7 +69,10 @@ module.exports = (env, argv) => {
                   // HTML
                   test: /\.html$/,
                   use: 'html-loader',
-              }
+              }, {
+                  test: /\.svg$/,
+                  loader: 'url-loader'
+                },
           ]
       },
       plugins,

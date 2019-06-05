@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../style/newProject.scss";
+import styles from "../../style/newProject/newProject.scss";
 import GeneralInformation from "./generalProperties/generalInformation";
 import Languages from "./generalProperties/languages";
 import ThematicAreas from "./generalProperties/thematicAreas";
@@ -19,12 +19,7 @@ class NewProject extends React.Component {
             <div className="row">
                 <nav className={`${styles.header} col s10 offset-s2 grey lighten-5`}>
                     <div className="row">
-                        <div className="col s6">
-                            <h4 className={styles.title}>
-                                Propietats generals del projecte
-                            </h4>
-                        </div>
-                        <div className={`${styles.breadcrumbs} col s4 offset-s2`}>{labels.breadcrumbs}</div>
+                        <div className={`${styles.breadcrumbs} col s6`}>{labels.breadcrumbs}</div>
                     </div>
                 </nav>
                 <div className="col s6 offset-s4">

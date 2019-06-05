@@ -9,6 +9,11 @@
   color: #ffab40 !important;
 }
 
+.input input,
+.input textarea {
+  border-color: white !important;
+}
+
 .input input:focus,
 .input textarea:focus {
   border-bottom: 1px solid white !important;

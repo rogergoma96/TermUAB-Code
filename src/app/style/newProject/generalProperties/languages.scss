@@ -1,0 +1,18 @@
+.checkbox span {
+  color: white !important;
+}
+
+:global {
+  /* change colour of filled in check box */
+  .checkbox-orange-white[type="checkbox"].filled-in:checked + span:not(.lever):after
+  {
+    border: 2px solid #ffab40;
+    background-color: #ffab40;
+  }
+
+  /* change colour of filled in check box */
+  .checkbox-orange-white[type="checkbox"].filled-in + span:not(.lever):after
+  {
+    border: 2px solid rgba(160, 160, 160, 0.3);
+  }
+}

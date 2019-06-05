@@ -1,5 +1,6 @@
 import React from "react";
-import stylesCard from "../../../style/newProject.scss";
+
+import stylesCard from "../../../style/newProject/newProject.scss";
 import styles from "../../../style/newProject/generalProperties/generalInformation.scss";
 
 /**
