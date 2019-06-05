@@ -1,5 +1,6 @@
 import React from "react";
-import styles from "../../../style/newProject.scss";
+import stylesCard from "../../../style/newProject.scss";
+import styles from "../../../style/newProject/generalProperties/generalInformation.scss";
 
 /**
  * General information
@@ -14,7 +15,7 @@ class GeneralInformation extends React.Component {
 
         return (
             <div className="card teal darken-3">
-                <h5 className={`${styles['card-title']} card-action`}>
+                <h5 className={`${stylesCard['card-title']} card-action`}>
                     Informació general
                 </h5>
                 <div className="card-content white-text">
@@ -23,7 +24,7 @@ class GeneralInformation extends React.Component {
                         <label className="active">Nom del projecte:</label>
                     </div>
                     <div className={`${styles.input} input-field`}>
-                        <textarea className={`${styles.textarea} materialize-textarea`} id="projectDescription" name="projectDescription" />
+                        <textarea className="materialize-textarea" id="projectDescription" name="projectDescription" />
                         <label className="active">Descripció:</label>
                     </div>
                 </div>

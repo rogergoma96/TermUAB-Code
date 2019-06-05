@@ -1,0 +1,16 @@
+.input label,
+.input input,
+.input textarea {
+  color: white;
+}
+
+.input input:focus + label,
+.input textarea:focus + label {
+  color: #ffab40 !important;
+}
+
+.input input:focus,
+.input textarea:focus {
+  border-bottom: 1px solid white !important;
+  box-shadow: 0 1px 0 0 white !important
+}

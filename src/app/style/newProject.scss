@@ -15,37 +15,3 @@
 .breadcrumbs {
   text-align: right;
 }
-
-.subtitle {
-  font-size: 1rem !important;
-  font-weight: 400 !important;
-  margin: 0 !important;
-}
-
-.title {
-  font-size: 1.2rem !important;
-  line-height: inherit !important;
-  margin: 0 !important;
-}
-
-.textarea {
-  color: white !important;
-  font-weight: 300 !important;
-}
-
-.input label,
-.input input,
-.input textarea {
-  color: white;
-}
-
-.input input:focus + label,
-.input textarea:focus + label {
-  color: #ffab40 !important;
-}
-
-.input input:focus,
-.input textarea:focus {
-  border-bottom: 1px solid white !important;
-  box-shadow: 0 1px 0 0 white !important
-}
