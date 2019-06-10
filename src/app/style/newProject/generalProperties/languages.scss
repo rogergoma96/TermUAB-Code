@@ -2,6 +2,21 @@
   color: white !important;
 }
 
+.checkbox {
+  padding: 8px !important;
+}
+
+.flags {
+  padding: 16px;
+}
+
+.text {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 :global {
   /* change colour of filled in check box */
   .checkbox-orange-white[type="checkbox"].filled-in:checked + span:not(.lever):after

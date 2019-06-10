@@ -21,35 +21,37 @@ class Languages extends React.Component {
                 <h5 className={`${stylesCard['card-title']} card-action`}>
                     Llengües del projete:
                 </h5>
-                <div className="col s4 card-content white-text">
-                    <label className={styles.checkbox}>
-                        <input type="checkbox" className="filled-in checkbox-orange-white" />
-                        <span><FlagIcon code="es-ct" /> Català</span>
-                    </label>
-                </div>
-                <div className="col s4 card-content white-text">
-                    <label className={styles.checkbox}>
-                        <input type="checkbox" className="filled-in checkbox-orange-white" />
-                        <span><FlagIcon code="es-ct" /> Català</span>
-                    </label>
-                </div>
-                <div className="col s4 card-content white-text">
-                    <label className={styles.checkbox}>
-                        <input type="checkbox" className="filled-in checkbox-orange-white" />
-                        <span><FlagIcon code="fr" /> Frances</span>
-                    </label>
-                </div>
-                <div className="col s4 card-content white-text">
-                    <label className={styles.checkbox}>
-                        <input type="checkbox" className="filled-in checkbox-orange-white" />
-                        <span><FlagIcon code="it" /> Italiano</span>
-                    </label>
-                </div>
-                <div className="col s4 card-content white-text">
-                    <label className={styles.checkbox}>
-                        <input type="checkbox" className="filled-in checkbox-orange-white" />
-                        <span><FlagIcon code="es" /> Español</span>
-                    </label>
+                <div className={`${styles.flags} row`}>
+                    <div className={`${styles.checkbox} col s3 card-content white-text`}>
+                        <label>
+                            <input type="checkbox" className="filled-in checkbox-orange-white" />
+                            <span className={styles.text}><FlagIcon code="es-ct" /> Català</span>
+                        </label>
+                    </div>
+                    <div className={`${styles.checkbox} col s3 card-content white-text`}>
+                        <label>
+                            <input type="checkbox" className="filled-in checkbox-orange-white" />
+                            <span className={styles.text}><FlagIcon code="es-ct" /> Català</span>
+                        </label>
+                    </div>
+                    <div className={`${styles.checkbox} col s3 card-content white-text`}>
+                        <label>
+                            <input type="checkbox" className="filled-in checkbox-orange-white" />
+                            <span className={styles.text}><FlagIcon code="fr" /> Frances</span>
+                        </label>
+                    </div>
+                    <div className={`${styles.checkbox} col s3 card-content white-text`}>
+                        <label>
+                            <input type="checkbox" className="filled-in checkbox-orange-white" />
+                            <span className={styles.text}><FlagIcon code="it" /> Italiano</span>
+                        </label>
+                    </div>
+                    <div className={`${styles.checkbox} col s3 card-content white-text`}>
+                        <label>
+                            <input type="checkbox" className="filled-in checkbox-orange-white" />
+                            <span className={styles.text}><FlagIcon code="es" /> Español</span>
+                        </label>
+                    </div>
                 </div>
             </div>
         );
