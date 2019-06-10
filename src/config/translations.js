@@ -20,6 +20,15 @@ const getTranslations = {
         newProject: {
             title: 'Nou projecte',
             breadcrumbs: 'Inici > Nou projecte',
+            generalInformation: {
+                projectInformation: 'Informació general',
+                projectName: 'Nom del projecte:',
+                projectDescription: 'Descripció:',
+                projectLanguages: 'Llengües del projecte',
+                thematicAreas: 'Arees temàtiques',
+                newArea: 'Afegeix nova area temàtica',
+                nextStep: 'Continuar',
+            }
         }
     }
 };

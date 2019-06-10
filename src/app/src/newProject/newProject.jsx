@@ -23,10 +23,12 @@ class NewProject extends React.Component {
                     </div>
                 </nav>
                 <div className="col s6 offset-s4">
-                    <GeneralInformation labels={labels}/>
-                    <Languages labels={labels} />
-                    <ThematicAreas labels={labels} />
-                    <button className="btn waves-effect waves-light" type="submit" name="action">Continuar</button>
+                    <GeneralInformation labels={labels.generalInformation}/>
+                    <Languages labels={labels.generalInformation} />
+                    <ThematicAreas labels={labels.generalInformation} />
+                    <button className="btn waves-effect waves-light" type="submit" name="action">
+                        {labels.generalInformation.nextStep}
+                    </button>
                 </div>
             </div>
         );

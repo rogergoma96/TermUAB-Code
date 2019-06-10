@@ -19,7 +19,7 @@ class Languages extends React.Component {
         return (
             <div className="row card teal darken-3">
                 <h5 className={`${stylesCard['card-title']} card-action`}>
-                    Llengües del projete:
+                    {labels.projectLanguages}
                 </h5>
                 <div className={`${styles.flags} row`}>
                     <div className={`${styles.checkbox} col s3 card-content white-text`}>

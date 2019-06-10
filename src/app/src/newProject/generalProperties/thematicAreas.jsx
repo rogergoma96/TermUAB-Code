@@ -15,10 +15,10 @@ class ThematicAreas extends React.Component {
         return (
             <div className="card teal darken-3">
                 <h5 className={`${styles['card-title']} card-action`}>
-                    Arees temàtiques:
+                    {labels.thematicAreas}
                 </h5>
                 <div className="card-content white-text">
-                    <p>+ Afegeix nova area temàtica</p>
+                    <p>+ {labels.newArea}</p>
                 </div>
             </div>
         );
