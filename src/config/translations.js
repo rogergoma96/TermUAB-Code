@@ -29,6 +29,12 @@ const getTranslations = {
                 newArea: 'Afegeix nova area temàtica',
                 nextStep: 'Continuar',
             }
+        },
+        myProjects: {
+            breadcrumbs: 'Inici > Els meus projecte',
+        },
+        projects: {
+            breadcrumbs: 'Inici > Buscar projectes',
         }
     }
 };

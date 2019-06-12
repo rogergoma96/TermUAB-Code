@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import { Route, Router, Switch } from "react-router-dom";
 import { createBrowserHistory } from "history";
 
-import Header from "./home/header";
+import Header from "./header";
 import Home from "./home/home";
 import Login from "./authentication/login";
 import MyProjects from "./myProjects";
 import NewProject from "./newProject/newProject";
 import Projects from "./projects";
-import SideNav from "./home/sideNav";
+import SideNav from "./sideNav";
 import SignUp from "./authentication/signUp";
 
 import getTranslations from "../../config/translations";
@@ -28,8 +28,8 @@ ReactDOM.render(
                 <Route exact path="/login" component={Login}/>
                 <Route exact path="/signup" component={SignUp} />
                 <Route exact path="/new-project" component={() => <NewProject labels={labels.newProject} />} />
-                <Route exact path="/my-projects" component={MyProjects} />
-                <Route exact path="/projects" component={Projects} />
+                <Route exact path="/my-projects" component={() => <MyProjects labels={labels.myProjects} />} />
+                <Route exact path="/projects" component={() => <Projects labels={labels.projects} />} />
             </Switch>
         </Router>
     </div>,

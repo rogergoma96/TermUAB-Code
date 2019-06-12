@@ -13,7 +13,7 @@ class ThematicAreas extends React.Component {
         const { labels } = this.props;
 
         return (
-            <div className="card teal darken-3">
+            <div className="card">
                 <h5 className={`${styles['card-title']} card-action`}>
                     {labels.thematicAreas}
                 </h5>

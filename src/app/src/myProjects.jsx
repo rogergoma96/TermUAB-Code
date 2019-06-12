@@ -1,4 +1,5 @@
 import React from "react";
+import Breadcrumbs from "./breadcrumbs";
 
 /**
  * MyProjects
@@ -13,6 +14,7 @@ class MyProjects extends React.Component {
 
         return (
             <div className="row">
+                <Breadcrumbs labels={labels} />
                 <div className="col s10 offset-s2" />
             </div>
         );

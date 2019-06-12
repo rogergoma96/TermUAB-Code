@@ -17,17 +17,11 @@ class Languages extends React.Component {
         const { labels } = this.props;
 
         return (
-            <div className="row card teal darken-3">
+            <div className="card">
                 <h5 className={`${stylesCard['card-title']} card-action`}>
                     {labels.projectLanguages}
                 </h5>
                 <div className={`${styles.flags} row`}>
-                    <div className={`${styles.checkbox} col s3 card-content white-text`}>
-                        <label>
-                            <input type="checkbox" className="filled-in checkbox-orange-white" />
-                            <span className={styles.text}><FlagIcon code="es-ct" /> Català</span>
-                        </label>
-                    </div>
                     <div className={`${styles.checkbox} col s3 card-content white-text`}>
                         <label>
                             <input type="checkbox" className="filled-in checkbox-orange-white" />

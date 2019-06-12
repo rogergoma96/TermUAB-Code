@@ -1,5 +1,5 @@
-.signUp {
-  min-height: 100vh;
+.container {
+  margin-top: 32px;
 }
 
 .card {
@@ -7,33 +7,44 @@
 }
 
 .title {
+  color: white;
   font-size: 2.2rem;
   margin-top: 0;
 }
 
 .text {
+  color: white;
   margin-bottom: 0;
+
+  label {
+    color: white !important;
+  }
 }
 
 .link {
+  color: white;
   cursor: pointer;
   text-decoration: underline;
 
   &:hover {
-    color: rgba(0,0,0,0.87);
+    color: #ff9100;
   }
 }
 
-:global {
-  .container  {
-    display: flex;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-  }
+.input label,
+.input input {
+  color: white;
+}
 
-  .container .row {
-    width: 100%;
-  }
+.input input:focus + label {
+  color: #ff9100  !important;
+}
+
+.input input {
+  border-bottom: 2px solid rgba(160, 160, 160, 0.3) !important;
+}
+
+.input input:focus {
+  border-bottom: 1px solid white !important;
+  box-shadow: 0 1px 0 0 white !important
 }

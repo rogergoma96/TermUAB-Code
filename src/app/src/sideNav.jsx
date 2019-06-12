@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import styles from '../../style/sideNav.scss';
+import styles from '../style/sideNav.scss';
 
 /**
  * SideNav
@@ -12,10 +12,6 @@ class SideNav extends React.Component {
      * @returns {*} JSX
      */
     render() {
-        if (window.location.pathname === '/login' || window.location.pathname === '/signup') {
-            return null;
-        }
-
         return (
             <ul id="nav-mobile" className="sidenav sidenav-fixed col s2">
                 <li className={styles.item}>
@@ -26,6 +22,21 @@ class SideNav extends React.Component {
                 <li className={styles.item}>
                     <Link to={'/signup'}>
                         <span>Regístrate</span>
+                    </Link>
+                </li>
+                <li className={styles.item}>
+                    <Link to={'/new-project'}>
+                        <span>Nou projecte</span>
+                    </Link>
+                </li>
+                <li className={styles.item}>
+                    <Link to={'/my-projects'}>
+                        <span>Els meus projectes</span>
+                    </Link>
+                </li>
+                <li className={styles.item}>
+                    <Link to={'/projects'}>
+                        <span>Buscar projectes</span>
                     </Link>
                 </li>
             </ul>

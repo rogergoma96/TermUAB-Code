@@ -2,7 +2,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import Enzyme, { shallow } from 'enzyme';
 import React from 'react';
 
-import SideNav from '../../src/home/sideNav';
+import SideNav from '../../src/sideNav';
 
 Enzyme.configure({ adapter: new Adapter() });
 

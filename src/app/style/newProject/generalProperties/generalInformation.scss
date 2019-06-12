@@ -1,21 +1,21 @@
 .input label,
 .input input,
 .input textarea {
-  color: white;
+  color: #121314;
 }
 
 .input input:focus + label,
 .input textarea:focus + label {
-  color: #ffab40 !important;
+  color: #00695c !important;
 }
 
 .input input,
 .input textarea {
-  border-bottom: 2px solid rgba(160, 160, 160, 0.3) !important;
+  border-bottom: 1px solid rgba(160, 160, 160, 0.3) !important;
 }
 
 .input input:focus,
 .input textarea:focus {
-  border-bottom: 1px solid white !important;
-  box-shadow: 0 1px 0 0 white !important
+  border-bottom: 1px solid #00695c !important;
+  box-shadow: 0 1px 0 0 #00695c !important
 }

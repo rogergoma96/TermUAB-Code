@@ -15,7 +15,7 @@ class GeneralInformation extends React.Component {
         const { labels } = this.props;
 
         return (
-            <div className="card teal darken-3">
+            <div className="card">
                 <h5 className={`${stylesCard['card-title']} card-action`}>
                     {labels.projectInformation}
                 </h5>
