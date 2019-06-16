@@ -1,14 +1,14 @@
 module.exports = (app, passport) => {
     // POST - LOGIN
     app.post('/login', passport.authenticate('user-login', {
-        successRedirect: '/signup',
+        successRedirect: '/',
         failureRedirect: '/login',
         failureFlash: true,
     }));
 
     // POST - REGISTER
     app.post('/signup', passport.authenticate('user-signup', {
-        successRedirect: '/login',
+        successRedirect: '/',
         failureRedirect: '/signup',
         failureFlash: true,
     }));

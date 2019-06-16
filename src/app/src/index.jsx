@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, Router, Switch } from "react-router-dom";
 import { createBrowserHistory } from "history";
+import Cookies from "js-cookie";
 
 import Header from "./header";
 import Home from "./home/home";
@@ -17,18 +18,19 @@ import '../style/globals.scss';
 
 const history = createBrowserHistory();
 const labels = getTranslations['ca'];
+const session = Cookies.get('connect.sid');
 
 ReactDOM.render(
     <div className="row">
         <Router history={history}>
-            <SideNav />
+            <SideNav session={session} />
             <Header />
             <Switch>
-                <Route exact path="/" component={() => <Home labels={labels.home} />} />
-                <Route exact path="/login" component={Login}/>
-                <Route exact path="/signup" component={SignUp} />
-                <Route exact path="/new-project" component={() => <NewProject labels={labels.newProject} />} />
-                <Route exact path="/my-projects" component={() => <MyProjects labels={labels.myProjects} />} />
+                <Route exact path="/" component={() => <Home session={session} labels={labels.home} />} />
+                {!session && <Route exact path="/login" component={Login}/>}
+                {!session && <Route exact path="/signup" component={SignUp} />}
+                {session && <Route exact path="/new-project" component={() => <NewProject labels={labels.newProject} />} />}
+                {session && <Route exact path="/my-projects" component={() => <MyProjects labels={labels.myProjects} />} />}
                 <Route exact path="/projects" component={() => <Projects labels={labels.projects} />} />
             </Switch>
         </Router>

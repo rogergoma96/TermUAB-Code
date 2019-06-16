@@ -27,6 +27,9 @@ app.use(session({
     secret: 'ESTO ES SECRETO',
     resave: false,
     saveUninitialized: false,
+    cookie: {
+        httpOnly: false,
+    }
 }));
 
 // ROUTES
