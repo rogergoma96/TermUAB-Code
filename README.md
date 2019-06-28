@@ -37,8 +37,8 @@ Que cosas necesitas para instalar el software y como instalarlas:
   npm -v
   ```
    
-* MongoDB: La base de datos que utiliza el sistema es MongoDB, y se puede descargar en el siguiente enlace: [Descarga MonogDB](https://www.mongodb.com/download-center/community)
-  Iniciar el instalador y seguir los pasos indicados. Y a ccontinuación iniciar el servidor de MongoDB: mongod.
+* MongoDB: La base de datos que utiliza el sistema es MongoDB, y se puede descargar en el siguiente enlace: [Descarga MonogDB](https://www.mongodb.com/download-center/community).
+  Iniciar el instalador y seguir los pasos indicados. Y a continuación iniciar el servidor de MongoDB: mongod.
     
   ```
   D:\mongodb\bin\mongod.exe
@@ -63,7 +63,7 @@ Para npm:
   npm install
   ```
   
-Para npm:
+Para yarn:
   ```
   yarn install
   ```
