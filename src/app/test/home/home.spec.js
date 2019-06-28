@@ -7,8 +7,15 @@ import Home from '../../src/home/home';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('Home', () => {
+    const props = {
+        labels: {
+            cards: ['1', '2', '3'],
+        },
+        session: true,
+    };
+
     it('should renders without crashing', () => {
-        const wrapper = shallow(<Home />);
+        const wrapper = shallow(<Home {...props} />);
         expect(wrapper.find('.row').exists()).toEqual(true);
     });
 });

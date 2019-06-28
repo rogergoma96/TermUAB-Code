@@ -9,6 +9,6 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('SignUp', () => {
     it('should renders without crashing', () => {
         const wrapper = shallow(<SignUp />);
-        expect(wrapper.find('.signUp').exists()).toEqual(true);
+        expect(wrapper.find('.container').exists()).toEqual(true);
     });
 });
