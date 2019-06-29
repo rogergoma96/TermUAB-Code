@@ -110,11 +110,11 @@ muestra de manera clara los resultados de esta prueba.
 
 Herramientas utilizadas en el proyecto:
 
-* [ReactJS](https://es.reactjs.org/docs/getting-started.html) - Una biblioteca de JavaScript para construir interfaces de usuario
-* [NodeJS](https://nodejs.org/es/docs/) -  entorno de ejecución para JavaScript construido con el motor de JavaScript V8 de Chrome.
+* [ReactJS](https://es.reactjs.org/docs/getting-started.html) - Una biblioteca de JavaScript para construir interfaces de usuario.
+* [NodeJS](https://nodejs.org/es/docs/) -  Entorno de ejecución para JavaScript construido con el motor de JavaScript V8 de Chrome.
 * [Express](https://expressjs.com/es/starter/installing.html) - Infraestructura web rápida, minimalista y flexible para Node.js
-* [MongoDB](https://www.mongodb.com/) - Usado para generar RSS
+* [MongoDB](https://www.mongodb.com/) - Base de datos orientada a documentos.
 
-## Autores ✒️
+## Autor ✒️
 
 * **Roger Gomà Roca** - *Trabajo de final de grado - Ingenieria Informática - UAB* - [rogergoma96](https://github.com/rogergoma96)
