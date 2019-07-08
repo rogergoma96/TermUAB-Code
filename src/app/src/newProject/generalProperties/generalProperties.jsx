@@ -1,7 +1,6 @@
 import React from "react";
 import GeneralInformation from "./generalInformation";
 import Languages from "./languages";
-import ThematicAreas from "./thematicAreas";
 
 /**
  * GeneralProperites
@@ -17,13 +16,11 @@ class GeneralProperties extends React.Component {
             description: '',
             name: '',
             languages: [],
-            thematicAreas: [],
         };
 
         this.saveName = this.saveName.bind(this);
         this.saveDescription = this.saveDescription.bind(this);
         this.saveLanguages = this.saveLanguages.bind(this);
-        this.saveThematicAreas = this.saveThematicAreas.bind(this);
     }
 
     /**
@@ -60,14 +57,6 @@ class GeneralProperties extends React.Component {
     }
 
     /**
-     * Save project thematic areas
-     * @param thematicAreas {string} - Project thematic areas
-     */
-    saveThematicAreas(thematicAreas) {
-        this.setState({ thematicAreas });
-    }
-
-    /**
      * Render
      * @returns {*} JSX
      */
@@ -86,9 +75,6 @@ class GeneralProperties extends React.Component {
                     labels={labels.generalInformation}
                     saveLanguages={this.saveLanguages}
                 />
-                <ThematicAreas
-                    labels={labels.generalInformation}
-                    saveAreas={this.saveThematicAreas} />
                 <button className="teal darken-3 btn waves-effect waves-light hoverable" onClick={action}>
                     {labels.generalInformation.nextStep}
                 </button>

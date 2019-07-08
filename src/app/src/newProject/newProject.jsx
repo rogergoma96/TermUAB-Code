@@ -22,7 +22,7 @@ class NewProject extends React.Component {
                     name: '',
                     description: '',
                     languages: [],
-                    thematicAreas: [],
+                    _id: '',
                 },
             }
         };
@@ -32,12 +32,49 @@ class NewProject extends React.Component {
 
     /**
      * Next step
-     * @param step {int} - Next step
+     * @param nextStep {int} - Next step
      */
     nextStep(nextStep, generalProperties) {
-        this.setState({ step: nextStep, userData: { generalProperties } });
+        this.setState({ step: nextStep, userData: { generalProperties } }, () => {
+            this.addProject();
+        });
     }
 
+    addProject() {
+        if(this.state._id) {
+            fetch(`/api/projects/${this.state._id}`, {
+                method: 'PUT',
+                body: JSON.stringify({
+                    name: this.state.name,
+                    description: this.state.description,
+                    languages: this.state.languages,
+                }),
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(res => res.json())
+                .then(data => {
+                    window.M.toast({html: 'Project Updated'});
+                    this.setState({_id: '', name: '', description: '', languages: []});
+                });
+        } else {
+            fetch('/api/projects', {
+                method: 'POST',
+                body: JSON.stringify(this.state.userData.generalProperties),
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(res => res.json())
+                .then(data => {
+                    window.M.toast({html: 'Project Saved'});
+                })
+                .catch(err => console.error(err));
+        }
+    }
     /**
      * Render
      * @returns {*} JSX
@@ -45,7 +82,7 @@ class NewProject extends React.Component {
     render() {
         const { labels } = this.props;
         const { step, userData } = this.state;
-        console.log(userData);
+
         return (
             <div className="row">
                 <Breadcrumbs labels={labels} step={step} />

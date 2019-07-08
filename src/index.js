@@ -34,7 +34,7 @@ app.use(session({
 
 // ROUTES
 require('./routes/user-routes')(app, passport);
-//app.use('/api/tasks', require('./routes/task.routes'));
+app.use('/api/projects', require('./routes/project.routes'));
 
 // STATIC FILES
 app.use(express.static(path.join(__dirname + '/public')));

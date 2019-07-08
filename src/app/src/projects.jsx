@@ -1,52 +1,72 @@
+import _ from 'lodash';
 import React from "react";
 import Breadcrumbs from "./breadcrumbs";
+import FlagIcon from "./lib/flagIconFactory.js";
+
+import styles from '../style/myProjects.scss';
 
 /**
- * MyProjects
+ * Projects
  */
-class Projects extends React.Component {
+export default class Projects extends React.Component {
+    constructor() {
+        super();
+
+        this.projects = {};
+    }
+
+    componentDidMount() {
+        this.getProjects();
+        let elem = document.querySelector('.collapsible.popout');
+        let instance = M.Collapsible.init(elem, {
+            accordion: false
+        });
+    }
+
+    getProjects() {
+        fetch('/api/projects')
+            .then(res => res.json())
+            .then(data => {
+                this.projects = data;
+            });
+    }
+
     /**
      * Render
      * @returns {*} JSX
      */
     render() {
         const { labels } = this.props;
-
         return (
             <div className="row">
                 <Breadcrumbs labels={labels} />
-                <div className="col s10 offset-s2">
-                    <table>
-                        <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Item Name</th>
-                            <th>Item Price</th>
-                        </tr>
-                        </thead>
-
-                        <tbody>
-                        <tr>
-                            <td>Alvin</td>
-                            <td>Eclair</td>
-                            <td>$0.87</td>
-                        </tr>
-                        <tr>
-                            <td>Alan</td>
-                            <td>Jellybean</td>
-                            <td>$3.76</td>
-                        </tr>
-                        <tr>
-                            <td>Jonathan</td>
-                            <td>Lollipop</td>
-                            <td>$7.00</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                <div className={`col s8 offset-s3 ${styles.container}`}>
+                    <ul className="collapsible popout">
+                        {_.map(this.projects, (project) => {
+                            return (
+                                <li>
+                                    <div className="collapsible-header">
+                                        {project.name}
+                                    </div>
+                                    <div className="collapsible-body">
+                                        <ul>
+                                            <li>{project.description}</li>
+                                            <li className={styles.more}><a>+ Veure mes</a></li>
+                                            <li className={styles.flags}>
+                                                {_.map(project.languages, (language) => {
+                                                    return (
+                                                        <FlagIcon code={language} />
+                                                    )
+                                                })}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            )
+                        })}
+                    </ul>
                 </div>
             </div>
         );
     }
 }
-
-export default Projects;
